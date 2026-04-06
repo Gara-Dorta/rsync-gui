@@ -33,7 +33,7 @@ jobs:
           tar -czf rsync-gtk-${{ github.event.release.tag_name }}-linux-x86_64.tar.gz rsync-gtk
 
       - name: Upload release artifact
-        uses: softprops/action-gh-release@v2
-        with:
-          files: rsync-gtk-${{ github.event.release.tag_name }}-linux-x86_64.tar.gz
-          overwrite_files: true
+        run: |
+          gh release create \
+            '${{ github.event.release.tag_name }}' \
+            rsync-gtk-${{ github.event.release.tag_name }}-linux-x86_64.tar.gz
