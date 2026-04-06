@@ -74,7 +74,7 @@ sudo ninja -C build install
 
 1. Launch the application:
 ```bash
-./build/rsync-gui
+./build/rsync-gtk
 ```
 
 2. Click "Select Source Folder" to choose the directory you want to copy from
