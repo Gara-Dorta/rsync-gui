@@ -13,69 +13,20 @@ A simple GTK4-based graphical user interface for rsync, making it easy to synchr
 - Real-time output display of rsync operation
 - Simple and intuitive interface
 
-## Prerequisites
+## Installation
 
-To build and run Rsync GUI, you need:
-
-- GTK 4 development libraries
-- Meson build system
-- Ninja build system
-- A C compiler (gcc or clang)
-- rsync
-
-### Ubuntu/Debian
-
-```bash
-sudo apt install build-essential meson ninja-build libgtk-4-dev rsync
-```
-
-### Fedora
-
-```bash
-sudo dnf install gcc meson ninja-build gtk4-devel rsync
-```
-
-### OpenSUSE
-
-```bash
-sudo zypper install gcc gcc-c++ meson ninja gtk4-devel rsync
-```
-
-### Arch Linux
-
-```bash
-sudo pacman -S base-devel meson ninja gtk4 rsync
-```
-
-## Building from Source
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/rsync-gui.git
-cd rsync-gui
-```
-
-2. Create a build directory and configure the project:
-```bash
-meson setup build
-```
-
-3. Build the project:
-```bash
-ninja -C build
-```
-
-4. Install (optional):
-```bash
-sudo ninja -C build install
-```
+1. Grab the latest binary from the releases page.
+2. Run it with
+    ```bash
+    ./rsync-gtk
+    ```
 
 ## Usage
 
 1. Launch the application:
-```bash
-./build/rsync-gtk
-```
+    ```bash
+    ./build/rsync-gtk
+    ```
 
 2. Click "Select Source Folder" to choose the directory you want to copy from
 3. Click "Select Destination Folder" to choose where you want to copy to
@@ -92,6 +43,64 @@ The program creates a graphical interface for the rsync command-line tool. When 
 - `-av`: Archive mode with verbose output
 - `--dry-run`: (Optional) Show what would be transferred
 - `--delete`: (Optional) Delete extraneous files from destination directory
+
+## Building from source
+### Prerequisites
+
+To build and run Rsync GUI, you need:
+
+- GTK 4 development libraries
+- Meson build system
+- Ninja build system
+- A C compiler (gcc or clang)
+- rsync
+
+#### Ubuntu/Debian
+
+```bash
+sudo apt install build-essential meson ninja-build libgtk-4-dev rsync
+```
+
+#### Fedora
+
+```bash
+sudo dnf install gcc meson ninja-build gtk4-devel rsync
+```
+
+#### OpenSUSE
+
+```bash
+sudo zypper install gcc gcc-c++ meson ninja gtk4-devel rsync
+```
+
+#### Arch Linux
+
+```bash
+sudo pacman -S base-devel meson ninja gtk4 rsync
+```
+
+### Building steps
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/rsync-gui.git
+    cd rsync-gui
+    ```
+
+2. Create a build directory and configure the project:
+    ```bash
+    meson setup build
+    ```
+
+3. Build the project:
+    ```bash
+    ninja -C build
+    ```
+
+4. Install (optional):
+    ```bash
+    sudo ninja -C build install
+    ```
 
 ## License
 
